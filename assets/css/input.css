@@ -1,0 +1,287 @@
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-Regular.woff2") format('woff2'),
+       url('/assets/fonts/Roboto-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;;
+  
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-Medium.woff2") format('woff2'),
+       url('/assets/fonts/Roboto-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;;
+  
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-SemiBold.woff2") format('woff2'),
+       url('/assets/fonts/Roboto-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;;
+  
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-Bold.woff2") format('woff2'),
+       url('/assets/fonts/Roboto-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;;
+  
+}
+/* Lora font */
+@font-face {
+  font-family: "Lora";
+  src: url("/assets/fonts/Lora-Regular.woff2") format('woff2'),
+       url('/assets/fonts/Lora-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;;
+  
+}
+@font-face {
+  font-family: "Lora";
+  src: url("/assets/fonts/Lora-Medium.woff2") format('woff2'),
+       url('/assets/fonts/Lora-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;;
+  
+}
+@font-face {
+  font-family: "Lora";
+  src: url("/assets/fonts/Lora-SemiBold.woff2") format('woff2'),
+       url('/assets/fonts/Lora-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;;
+  
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Lora-Bold.woff2") format('woff2'),
+       url('/assets/fonts/Lora-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;;
+  
+}
+
+@theme {
+  --spacing: 1px;
+  --spacing-space: clamp(3.125rem, 2.2416rem + 4.417vw, 6.25rem);
+ 
+  --breakpoint-*: initial;
+ 
+  --breakpoint-xsm: 430px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xlg: 1025px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1296px;
+ 
+  --container-*: initial;
+ 
+  --container-xsm: 100%;
+  --container-sm: 100%;
+  --container-md: 100%;
+  --container-lg: 100%;
+   --container-xlg: 100%;
+  --container-xl: 100%;
+  --container-xxl: 100%;
+ 
+  --font-roboto:  'Roboto';
+  --font-lora:  'Lora';
+ 
+  --text-h1: clamp(40px, 5vw, 68px);
+  --text-h1--font-weight: 500;
+
+  --text-h2: clamp(28px, 3.5vw, 42px);
+
+  --text-h3: clamp(22.5px, 3vw, 32px);
+
+  --text-h4: clamp(19px, 3vw, 25px);
+  
+  --text-t_20: clamp(18px, 2.5vw, 20px);
+
+  --text-p: 16px;
+
+  --text-sm: 14px;
+  --shadow-card: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+  --shadow-card1: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+  
+}
+/* Custom color themes using attribute selectors */
+:root {
+  --text-white: #ffffff;
+  --text-dark: #1c1d21;
+  --text-grey: #5A5D6A;
+  --text-blue: #1B3A76; 
+  --button-bg: #0198ff;
+ --gradient1: linear-gradient(150deg, #02010100 0%, #F3F5F8 100%);
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    @apply font-roboto text-(--text-dark)
+  }
+  button, a{
+   @apply cursor-pointer
+  }
+  a, span{
+    @apply inline-block
+  }
+  p
+  {
+    @apply  font-lora
+  }
+  .container{
+    @apply max-w-full! lg:max-w-1296! mx-auto px-16
+  }
+  header nav ul:not(.sub-menu){
+    @apply flex flex-col xlg:flex-row  xlg:gap-50 justify-start xlg:justify-end items-start xlg:items-center py-13 text-left xlg:text-center capitalize
+  }
+    header nav ul li{
+      @apply transition-all duration-300 ease-linear xlg:w-auto w-full
+    }
+  header nav ul li a{
+    @apply font-semibold  px-16 xlg:px-0 py-10 xlg:py-0  transition-all duration-300 ease-linear
+  }
+   header nav ul li:hover{
+    @apply bg-transparent;
+   }
+   .dropdown.active{
+     @apply bg-(--button-bg) xlg:bg-transparent ;
+   }
+   .dropdown.active a:not(.sub-menu a){
+    @apply text-white
+   }
+ header nav ul li:hover > a, header nav ul li:active > a, header nav ul li:focus > a {
+  @apply text-(--button-bg)
+ }
+
+  header nav ul li:hover > .sub-menu{
+    @apply md:opacity-100  md:visible
+  }
+  
+  header nav ul li .sub-menu li:hover, header nav ul li .sub-menu li:focus, header nav ul li .sub-menu li:active{
+    @apply  xlg:bg-(--button-bg) 
+  }
+ .dropdown{
+  @apply [&_a]:relative relative
+ }
+  .dropdown li{
+    @apply hover:[&_a]:text-white 
+  }
+ .sub-menu{
+  @apply static xlg:absolute w-full xlg:w-150 xlg:[&_li]:py-12 xlg:[&_li]:px-15 bg-white rounded-[3px] shadow-card1 top-full opacity-0 invisible transition-all duration-300 ease-in-out xlg:mt-20 overflow-hidden  max-h-0 xlg:max-h-none
+ }
+ .menu-items.dropdown.active .sub-menu{
+  @apply opacity-100 visible max-h-500
+ }
+footer ul li a{
+  @apply relative transition-all duration-300 ease-in-out hover:text-(--button-bg)
+}
+
+}
+
+@layer utility{
+  .btn-dark{
+    @apply bg-(--button-bg) px-24 py-12 text-white rounded-[3px] transition-all duration-300 ease-linear 
+    hover:bg-(--text-blue) font-semibold w-fit capitalize text-center
+  }
+.dropdown > a{
+  @apply flex items-center gap-6
+}
+.menu-btn.active .line-1 {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-btn.active .line-2 {
+  opacity: 0;
+}
+
+.menu-btn.active .line-3 {
+  transform: translateY(-7px) rotate(-45deg);
+}
+ 
+}
+/* CSS */
+.swiper-pagination-lock {
+    display: block;
+}
+.card-top {
+  background-image: linear-gradient(120deg, #0198ff 0%, #1B3A76
+ 100%);
+}
+.overlay-3{
+  background-color: transparent;
+  background-image: linear-gradient(115deg, #1B3A7640 30%, #1B3A76 100%);
+  opacity:0.9;
+  
+ }
+    
+ .bg-overlay{
+    position:absolute;
+    top:0;
+    background-color: transparent;
+    background-image: radial-gradient(at top right, var(--e-global-color-a954db2) 60%, #FFFFFFBA 100%);
+    opacity: 1;
+  }
+  .accordion-content {
+  max-height: 0;
+  transition: max-height 0.4s ease;
+}
+.accordion-item.active .accordion-header span {
+    color: white;
+}
+.accordion-item.active .accordion-header{
+   background-image: linear-gradient(120deg, #0198ff 0%, #1B3A76
+ 100%);
+}
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+ 
+}
+.accordion-item.active .icon-plus {
+  display: none;
+}
+
+.accordion-item.active .icon-minus {
+  display: block;
+}
+svg path{
+  transition:all .3s ease-in-out;
+
+}
+/* .dropdown:hover a svg path, .dropdown.active a svg path{
+  fill:white;
+} */
+ .dropdown.active a svg path{
+  fill:white;
+ }
+  .dropdown:hover a svg path, .dropdown:focus a svg path, .dropdown:active a svg path{
+  fill: #0198ff;
+ }
+ @media (min-width:1025px){
+ /* Keyboard TAB support */
+.menu-items.dropdown:focus-within > .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  max-height: 500px;
+}
+ }
