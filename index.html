@@ -1342,9 +1342,9 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                                 Email
                                             </label>
                                             <input
-                                                type="email"
-                                                id="email"
-                                                name="email"
+                                                type="email1"
+                                                id="email1"
+                                                name="email1"
                                                 placeholder="Email"
                                                 required
                                                 autocomplete="email"
@@ -1923,41 +1923,51 @@ window.addEventListener("load", function () {
 
 });
 </script>
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
 
   const menuBtn = document.querySelector(".menu-btn");
   const menu = document.getElementById("main-menu");
+  const allLinks = menu.querySelectorAll("a");
 
   // ===== MOBILE MENU TOGGLE =====
   menuBtn.addEventListener("click", () => {
-
     menu.classList.toggle("-translate-y-full");
     menu.classList.toggle("opacity-0");
-
-    // 🔥 IMPORTANT — allow clicks when open
     menu.classList.toggle("pointer-events-none");
-
-    // Hamburger → X
     menuBtn.classList.toggle("active");
-
   });
 
 
-  // ===== DROPDOWN TOGGLE (below xlg = 1025px) =====
+  // ===== MENU CLICK HANDLER =====
   menu.addEventListener("click", function (e) {
 
     if (window.innerWidth >= 1025) return;
 
+    const clickedLink = e.target.closest("a");
     const dropdown = e.target.closest(".menu-items.dropdown");
-    if (!dropdown) return;
 
-    // Ignore submenu links
-    if (e.target.closest(".sub-menu a")) return;
+    if (!clickedLink) return;
 
-    e.preventDefault();
+    // 👉 If clicking dropdown parent (Services / Pages)
+    if (dropdown && !clickedLink.closest(".sub-menu")) {
+      e.preventDefault();
+      dropdown.classList.toggle("active");
+      return;
+    }
 
-    dropdown.classList.toggle("active");
+    // 👉 Any normal link OR submenu link → CLOSE MENU
+    menu.classList.add("-translate-y-full", "opacity-0", "pointer-events-none");
+    menuBtn.classList.remove("active");
+
+    // Close all dropdowns
+    document.querySelectorAll(".menu-items.dropdown").forEach(item => {
+      item.classList.remove("active");
+    });
+
+    // ===== ACTIVE LINK =====
+    allLinks.forEach(l => l.classList.remove("text-blue-600"));
+    clickedLink.classList.add("text-blue-600");
 
   });
 
