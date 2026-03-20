@@ -277,6 +277,25 @@ svg path{
   .dropdown:hover a svg path, .dropdown:focus a svg path, .dropdown:active a svg path{
   fill: #0198ff;
  }
+ 
+ .swiper-pagination-bullet {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0198ff;
+}
+
+.swiper-pagination-bullet::after {
+  content: "";
+  position: absolute;
+  inset: -12px;       
+  border-radius: 50%;
+}
  @media (min-width:1025px){
  /* Keyboard TAB support */
 .menu-items.dropdown:focus-within > .sub-menu {
