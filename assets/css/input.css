@@ -208,13 +208,18 @@ header nav ul li a.active, header nav ul li a:focus-visible {
 footer ul li a{
   @apply relative transition-all duration-300 ease-in-out hover:text-(--button-bg)
 }
-.accordion-item.active .icon-plus {
- @apply hidden
+.icon-minus {
+  opacity: 0;
 }
 
 .accordion-item.active .icon-minus {
-  @apply block
+  opacity: 1;
 }
+
+.accordion-item.active .icon-plus {
+  opacity: 0;
+}
+
 }
 
 @layer utility{
