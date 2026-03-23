@@ -2077,6 +2077,42 @@
         background-color: var(--text-blue);
       }
     }
+    &:hover {
+      @media (hover: hover) {
+        &::before {
+          content: var(--tw-content);
+          background-color: transparent;
+        }
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        &::before {
+          content: var(--tw-content);
+          transition-property: all;
+          transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+          transition-duration: var(--tw-duration, var(--default-transition-duration));
+        }
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        &::before {
+          content: var(--tw-content);
+          --tw-duration: 300ms;
+          transition-duration: 300ms;
+        }
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        &::before {
+          content: var(--tw-content);
+          --tw-ease: linear;
+          transition-timing-function: linear;
+        }
+      }
+    }
     &:focus-visible {
       background-color: var(--text-blue);
     }
