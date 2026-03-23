@@ -254,6 +254,9 @@
   .z-10 {
     z-index: 10;
   }
+  .z-11 {
+    z-index: 11;
+  }
   .z-50 {
     z-index: 50;
   }
@@ -262,9 +265,6 @@
   }
   .z-999 {
     z-index: 999;
-  }
-  .z-\[11\] {
-    z-index: 11;
   }
   .container {
     width: 100%;
@@ -2022,9 +2022,10 @@
 }
 @layer utility {
   .btn-dark {
+    position: relative;
     width: fit-content;
     border-radius: 3px;
-    background-color: var(--button-bg);
+    background-color: var(--text-blue);
     padding-inline: calc(var(--spacing) * 24);
     padding-block: calc(var(--spacing) * 12);
     text-align: center;
@@ -2039,6 +2040,38 @@
     transition-duration: 300ms;
     --tw-ease: linear;
     transition-timing-function: linear;
+    &::before {
+      content: var(--tw-content);
+      position: absolute;
+    }
+    &::before {
+      content: var(--tw-content);
+      top: calc(var(--spacing) * 0);
+    }
+    &::before {
+      content: var(--tw-content);
+      left: calc(var(--spacing) * 0);
+    }
+    &::before {
+      content: var(--tw-content);
+      z-index: 0;
+    }
+    &::before {
+      content: var(--tw-content);
+      height: 100%;
+    }
+    &::before {
+      content: var(--tw-content);
+      width: 100%;
+    }
+    &::before {
+      content: var(--tw-content);
+      background-color: var(--button-bg);
+    }
+    &::before {
+      --tw-content: "";
+      content: var(--tw-content);
+    }
     &:hover {
       @media (hover: hover) {
         background-color: var(--text-blue);
@@ -2049,6 +2082,12 @@
     }
     &:active {
       background-color: var(--text-blue);
+    }
+    & span {
+      position: relative;
+    }
+    & span {
+      z-index: 10;
     }
   }
   .menu-item-has-children > a {

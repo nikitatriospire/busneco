@@ -224,8 +224,8 @@ footer ul li a{
 
 @layer utility{
   .btn-dark{
-    @apply bg-(--button-bg) px-24 py-12 text-white rounded-[3px] transition-all duration-300 ease-linear 
-    hover:bg-(--text-blue) active:bg-(--text-blue) focus-visible:bg-(--text-blue) font-semibold w-fit capitalize text-center 
+    @apply relative bg-(--text-blue) before:content-[""] before:w-full before:h-full before:absolute before:top-0 before:bg-(--button-bg) px-24 py-12 text-white rounded-[3px] transition-all duration-300 ease-linear before:left-0 before:z-0
+    hover:bg-(--text-blue) active:bg-(--text-blue) focus-visible:bg-(--text-blue) font-semibold w-fit capitalize text-center [&_span]:relative [&_span]:z-10
   }
 .menu-item-has-children > a{
   @apply flex items-center gap-6
