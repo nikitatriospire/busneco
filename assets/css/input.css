@@ -102,7 +102,7 @@
   --font-roboto:  'Roboto';
   --font-lora:  'Lora';
  
-  --text-h1: clamp(40px, 5vw, 68px);
+  --text-h1: clamp(40px, 5.2vw, 68px);
   --text-h1--font-weight: 500;
 
   --text-h2: clamp(28px, 3.5vw, 42px);
@@ -137,10 +137,13 @@
     box-sizing: border-box;
   }
   body{
-    @apply font-roboto text-(--text-dark)
+    @apply font-roboto text-(--text-dark) caret-transparent
   }
   button, a{
    @apply cursor-pointer
+  }
+  a:not(header ul li a, footer ul li a){
+    @apply text-(--button-bg)
   }
   a, span{
     @apply inline-block
@@ -156,21 +159,22 @@
     @apply flex flex-col xlg:flex-row  xlg:gap-50 justify-start xlg:justify-end items-start xlg:items-center py-13 text-left xlg:text-center capitalize
   }
     header nav ul li{
-      @apply transition-all duration-300 ease-linear xlg:w-auto w-full
+      @apply transition-all duration-300 ease-linear xlg:w-auto w-full font-lora xlg:font-roboto
     }
   header nav ul li a{
-    @apply font-semibold  px-16 xlg:px-0 py-10 xlg:py-0  transition-all duration-300 ease-linear
+    @apply font-medium  px-16 xlg:px-0 py-10 xlg:py-0  transition-all duration-300 ease-linear
   }
    header nav ul li:hover{
     @apply bg-transparent;
    }
-   .dropdown.active{
+  .menu-item-has-children.active, .menu-item-has-children:focus-within{
      @apply bg-(--button-bg) xlg:bg-transparent ;
    }
-   .dropdown.active a:not(.sub-menu a){
-    @apply text-white
+   .menu-item-has-children.active a:not(.sub-menu a), .menu-item-has-children:focus-within a:not(.sub-menu a){
+    @apply text-white xlg:text-(--button-bg)
    }
- header nav ul li:hover > a, header nav ul li:active > a, header nav ul li:focus > a {
+ header nav ul li:hover > a, header nav ul li a:active,
+header nav ul li a.active, header nav ul li a:focus-visible {
   @apply text-(--button-bg)
  }
 
@@ -181,30 +185,44 @@
   header nav ul li .sub-menu li:hover, header nav ul li .sub-menu li:focus, header nav ul li .sub-menu li:active{
     @apply  xlg:bg-(--button-bg) 
   }
- .dropdown{
-  @apply [&_a]:relative relative
+.menu-item-has-children{
+  @apply [&_a]:relative relative [&_a]:mr-24 
  }
-  .dropdown li{
+
+  .menu-item-has-children li{
     @apply hover:[&_a]:text-white 
   }
+  .menu-item-has-children > a::after {
+  @apply content-[''] w-8 h-8 ml-6 border-r-2 border-b-2 border-current inline-block transition-all duration-300 ease-in-out absolute;
+  
+  top: 36%;
+  right: -15px;
+  transform: rotate(45deg) translateY(-50%);
+}
  .sub-menu{
-  @apply static xlg:absolute w-full xlg:w-150 xlg:[&_li]:py-12 xlg:[&_li]:px-15 bg-white rounded-[3px] shadow-card1 top-full opacity-0 invisible transition-all duration-300 ease-in-out xlg:mt-20 overflow-hidden  max-h-0 xlg:max-h-none
+  @apply static xlg:absolute w-full xlg:w-150 xlg:[&_li]:py-12 xlg:[&_li]:px-15 bg-white xlg:rounded-[3px] xlg:shadow-card1 top-full opacity-0 invisible transition-all duration-300 ease-in-out xlg:mt-20 overflow-hidden  max-h-0 xlg:max-h-none [&_li]:text-left [&_li]:font-lora [&_li>a]:mr-0!
  }
- .menu-items.dropdown.active .sub-menu{
-  @apply opacity-100 visible max-h-500
+.menu-item-has-children.active .sub-menu, .menu-item-has-children:focus-within > .sub-menu{
+  @apply opacity-100 visible max-h-500 
  }
 footer ul li a{
   @apply relative transition-all duration-300 ease-in-out hover:text-(--button-bg)
 }
+.accordion-item.active .icon-plus {
+ @apply hidden
+}
 
+.accordion-item.active .icon-minus {
+  @apply block
+}
 }
 
 @layer utility{
   .btn-dark{
     @apply bg-(--button-bg) px-24 py-12 text-white rounded-[3px] transition-all duration-300 ease-linear 
-    hover:bg-(--text-blue) font-semibold w-fit capitalize text-center
+    hover:bg-(--text-blue) active:bg-(--text-blue) focus-visible:bg-(--text-blue) font-semibold w-fit capitalize text-center 
   }
-.dropdown > a{
+.menu-item-has-children > a{
   @apply flex items-center gap-6
 }
 .menu-btn.active .line-1 {
@@ -218,11 +236,14 @@ footer ul li a{
 .menu-btn.active .line-3 {
   transform: translateY(-7px) rotate(-45deg);
 }
- 
+.para ul{
+  @apply pl-20 flex flex-col gap-10 list-disc [&_li>a]:text-(--button-bg) [&_li:has(a)]:marker:text-(--button-bg)
+} 
 }
 /* CSS */
-.swiper-pagination-lock {
-    display: block;
+#skip-link {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
 }
 .card-top {
   background-image: linear-gradient(120deg, #0198ff 0%, #1B3A76
@@ -238,8 +259,8 @@ footer ul li a{
  .bg-overlay{
     position:absolute;
     top:0;
-    background-color: transparent;
-    background-image: radial-gradient(at top right, var(--e-global-color-a954db2) 60%, #FFFFFFBA 100%);
+    background-image: radial-gradient(at top right, #ffffff 60%, #FFFFFFBA 100%);
+    
     opacity: 1;
   }
   .accordion-content {
@@ -257,13 +278,7 @@ footer ul li a{
   max-height: 500px;
  
 }
-.accordion-item.active .icon-plus {
-  display: none;
-}
 
-.accordion-item.active .icon-minus {
-  display: block;
-}
 svg path{
   transition:all .3s ease-in-out;
 
@@ -271,36 +286,36 @@ svg path{
 /* .dropdown:hover a svg path, .dropdown.active a svg path{
   fill:white;
 } */
- .dropdown.active a svg path{
-  fill:white;
- }
-  .dropdown:hover a svg path, .dropdown:focus a svg path, .dropdown:active a svg path{
-  fill: #0198ff;
- }
- 
- .swiper-pagination-bullet {
-  position: relative;
-  width: 8px;
-  height: 8px;
-  background: #ccc;
+
+
+/* Container becomes tap target */
+.swiper-pagination-lock, .swiper-pagination {
+        display: flex;
+    justify-content: center;
+}
+.swiper-pagination-bullet {
+  width: 24px !important;
+  height: 24px !important;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 1;
+  border-radius: 50%;
+  margin:0 !important;
 }
 
-.swiper-pagination-bullet-active {
+/* Inner visible dot */
+.swiper-pagination-bullet::before {
+  content: "";
+  width: 10px !important;
+  height: 10px !important;
+  background: #ccc;
+  border-radius: 50%;
+  transition: all .3s ease;
+}
+
+/* Active state */
+.swiper-pagination-bullet-active::before {
   background: #0198ff;
 }
-
-.swiper-pagination-bullet::after {
-  content: "";
-  position: absolute;
-  inset: -12px;       
-  border-radius: 50%;
-}
- @media (min-width:1025px){
- /* Keyboard TAB support */
-.menu-items.dropdown:focus-within > .sub-menu {
-  opacity: 1;
-  visibility: visible;
-  max-height: 500px;
-}
- }
