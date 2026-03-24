@@ -8,17 +8,20 @@
         <link rel="stylesheet" href="./assets/css/output.css">
     </head>
     <body>
-   <a href="#main-content"
-   id="skip-link"
-   class="fixed top-0 left-0 z-50 bg-(--text-grey) text-white px-16 py-12 text-sm
+        <a href="#main-content" id="skip-link" class="fixed top-0 left-0 z-50 bg-[#1C1D211F] text-(--text-dark) px-30 py-15 text-sm
           transition-transform duration-200">
-   Skip to content
-</a>
+            Skip to content
+        </a>
         <header class="fixed top-0 left-0 w-full h-90 flex justify-center items-center border-b border-b-solid border-b-[#1C1D211F] z-11">
             <div class="container">
                 <div class="inner flex justify-between items-center gap-32 w-full">
-                    <a href="#" role="link" class="w-192 h-70 p-10 block">
-                        <img src="./assets/images/Logo-Busneco-1.png" alt="logo of busneco" role="img" class="w-192">
+                    <a href="#" role="link" class="w-222 sm:w-192 p-10 block">
+                        <img
+                            src="./assets/images/Logo-Busneco-1.png"
+                            alt="logo of busneco"
+                            role="img"
+                            class="w-full sm:w-192"
+                        >
                     </a>
                     <div class="flex justify-end items-center w-[80%]">
                         <div id="main-menu" class="p-10 absolute xlg:static w-full xlg:w-auto bg-white xlg:bg-transparent 
@@ -27,20 +30,35 @@ top-full left-0 max-h-500   xlg:h-auto
 transition-all duration-500 ease-in-out
 xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                             <nav>
-                                <ul><li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-14 current_page_item menu-item-28"><a href="http://localhost/simudar/" aria-current="page">Home</a></li>
-                                <li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a href="#">About Us</a></li>
-                                <li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30"><a href="#">Services</a>
-                                <ul class="sub-menu">
-                                <li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31"><a href="#">single service</a></li>
-                                <li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"><a href="#">pricing-plan</a></li>
-                                </ul>
-                                </li>
-                                <li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"><a href="#">E-Learning</a></li>
-                                <li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-34"><a href="#">Pages</a>
-                                <ul class="sub-menu">
-                                <li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a href="#">Contact us</a></li>
-                                </ul>
-                                </li>
+                                <ul>
+                                    <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-14 current_page_item menu-item-28">
+                                        <a href="http://localhost/simudar/" aria-current="page">Home</a>
+                                    </li>
+                                    <li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29">
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30">
+                                        <a href="#">Services</a>
+                                        <ul class="sub-menu">
+                                            <li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31">
+                                                <a href="#">single service</a>
+                                            </li>
+                                            <li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32">
+                                                <a href="#">pricing-plan</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33">
+                                        <a href="#">E-Learning</a>
+                                    </li>
+                                    <li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-34">
+                                        <a href="#">Pages</a>
+                                        <ul class="sub-menu">
+                                            <li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35">
+                                                <a href="#">Contact us</a>
+                                            </li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
@@ -49,10 +67,9 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                             <span class="line-2 w-22 h-2 bg-(--text-grey)  block transition-all duration-300"></span>
                             <span class="line-3 w-22 h-2 bg-(--text-grey)  block transition-all duration-300"></span>
                         </div>
-                  
                         <div class="max-w-192 w-full hidden md:flex justify-end p-10">
                             <a href="#" role="link" class="btn-dark">
-                                <span>Get Started</span> 
+                                <span>Get Started</span>
                             </a>
                         </div>
                     </div>
@@ -61,14 +78,14 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
         </header>
         <main id="main-content">
             <!-- Hero Section Starts -->
-            <section class="hero-section  relative over h-full md:h-630 xlg:h-766 overflow-hidden">
+    <section class="hero-section  relative over h-full md:h-630 xlg:h-766 overflow-hidden">
                 <img src="./assets/images/hero-bg-image.webp" alt="Team planning business strategies for growth" class="w-full h-full absolute top-0 z-0 object-left md:object-top-right object-cover">
                 <div class="container h-full">
                     <div class="inner relative z-10 pt-96 flex h-full flex-col md:flex-row">
-                        <div class="hero-left md:w-1/2 flex justify-end xlg:justify-center items-center">
+                        <div class="hero-left md:w-[65%] xlg:w-1/2 flex justify-end xlg:justify-center items-center">
                             <div class="content px-12 py-28 md:p-0">
-                                <h1 class="text-h1 leading-[1.1em] mb-20 capitalize">Improving your strategies, growing your business</h1>
-                                <div class="para  space-y-16 mb-34 text-p font-semibold [&_p]:font-roboto!">
+                                <h1 class="text-h1 leading-[1em] mb-20 capitalize tracking-[-2px]">Improving your strategies, growing your business</h1>
+                                <div class="para  space-y-16 mb-34 text-p font-semibold [&_p]:font-roboto! w-full md:w-[80%] xlg:w-full">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                                 </div>
                                 <div class="">
@@ -78,18 +95,27 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                 </div>
                             </div>
                         </div>
-                        <div class="hero-right relative md:w-1/2 h-full flex justify-end xlg:justify-center items-end">
+                        <div class="hero-right md:absolute md:-right-41 lg:-right-20 xlg:relative w-full md:w-450 xlg:w-1/2 h-full flex justify-center md:justify-end xlg:justify-center items-end">
                             <div class="relative h-full w-[90%] xlg:w-auto">
                                 <img
                                     src="./assets/images/banner-1.png"
                                     alt="Business growth and strategy concept illustration"
                                     role="img"
-                                    class="w-full sm:h-420 md:h-540 xlg:h-670 object-cover relative z-10"
+                                    class="w-full sm:h-420 md:h-540 xlg:h-670 object-contain md:object-cover relative z-10"
                                     loading="eager"
-                                     sizes="(max-width: 768px) 90vw, 50vw" fetchpriority="high" decoding="async"
+                                    sizes="(max-width: 768px) 90vw, 50vw"
+                                    fetchpriority="high"
+                                    decoding="async"
                                 >
-                                <div class="absolute inset-0 z-0 -translate-y-1/2 top-[40%] md:[45%] xlg:top-[47%]">
-                                    <img src="./assets/images/Memphis-1.png" alt="background illustration" class="sm:w-[65%] md:w-full object-contain object-center mx-auto" loading="lazy" sizes="(max-width: 768px) 65vw, 50vw" decoding="async">
+                                <div class="absolute inset-0 z-0 -translate-y-1/2 top-[40%] md:top-[45%] xlg:top-[47%]">
+                                    <img
+                                        src="./assets/images/Memphis-1.png"
+                                        alt="background illustration"
+                                        class="sm:w-[65%] md:w-[88%] lg:w-full object-contain object-center mx-auto"
+                                        loading="lazy"
+                                        sizes="(max-width: 768px) 65vw, 50vw"
+                                        decoding="async"
+                                    >
                                 </div>
                             </div>
                         </div>
@@ -138,7 +164,8 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                         >
                                     </div>
                                 </div>
-                                <h2 class="text-h3 leading-[1.1em] font-medium tracking-wide text-center xlg:text-left">Over 2,000 Company worldwide rely on
+                                <h2 class="text-h3 leading-[1.1em] font-medium tracking-wide text-center xlg:text-left">
+                                    Over 2,000 Company worldwide rely on
                                     <span class="text-(--button-bg)">Busneco</span>
                                 </h2>
                             </div>
@@ -261,7 +288,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                         class="btn-dark"
                                         aria-label="Discover more about our business strategy and consulting services"
                                     >
-                                      <span>  Discover More</span>
+                                        <span>  Discover More</span>
                                     </a>
                                 </div>
                             </div>
@@ -357,7 +384,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                     class="btn-dark"
                                     aria-label="Discover more about our business strategy and consulting services"
                                 >
-                                   <span> Discover More</span>
+                                    <span> Discover More</span>
                                 </a>
                             </div>
                         </div>
@@ -382,7 +409,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                         </div>
                         <!-- block -->
                         <div class="rounded-[3px] bg-white overflow-hidden shadow-card">
-                            <div class="">
+                            <div class="flex flex-col h-full">
                                 <div class="flex jutify-center md:justify-start items-center md:items-start gap-20 p-20 md:p-25 xlg:p-30 flex-col md:flex-row">
                                     <div class="w-65 h-65 bg-(--button-bg) rounded-[3px] flex justify-center items-center shrink-0">
                                         <img
@@ -394,24 +421,24 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                     </div>
                                     <div class="text-center md:text-left">
                                         <h3 class="text-h4 font-medium">Coaching</h3>
-                                        <span class="para  space-y-16 font-lora text-(--text-grey)">Ultricies porttitor diam urna nisi efficitur magna mollis nunc taciti pulvinar. Nam at nisi dui id facilisis sapien luctus congue euismod aptent lobortis.</span>
+                                        <span class="para space-y-16 font-lora text-(--text-grey)">Ultricies porttitor diam urna nisi efficitur magna mollis nunc taciti pulvinar. Nam at nisi dui id facilisis sapien luctus congue euismod aptent lobortis.</span>
                                     </div>
                                 </div>
-                                <div class="pt-14">
+                                <div class="pt-14 h-full flex mt-auto">
                                     <a
                                         href="#"
                                         role="link"
                                         class="btn-dark w-full!"
-                                        aria-label="learn more about our strategy and  services"
+                                        aria-label="learn more about our strategy and services"
                                     >
-                                       <span>learn More</span> 
+                                        <span>learn More</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <!-- block -->
                         <div class="rounded-[3px] bg-white overflow-hidden shadow-card">
-                            <div class="">
+                            <div class="flex flex-col h-full">
                                 <div class="flex jutify-center md:justify-start items-center md:items-start gap-20 p-20 md:p-25 xlg:p-30 flex-col md:flex-row">
                                     <div class="w-65 h-65 bg-(--button-bg) rounded-[3px] flex justify-center items-center shrink-0">
                                         <img
@@ -423,10 +450,10 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                     </div>
                                     <div class="text-center md:text-left">
                                         <h3 class="text-h4 font-medium">Consulting</h3>
-                                        <span class="para  space-y-16 font-lora text-(--text-grey)">Ultricies porttitor diam urna nisi efficitur magna mollis nunc taciti pulvinar. Nam at nisi dui id facilisis sapien luctus congue euismod aptent lobortis.</span>
+                                        <span class="para space-y-16 font-lora text-(--text-grey)">Ultricies porttitor diam urna nisi efficitur magna mollis nunc taciti pulvinar. Nam at nisi dui id facilisis sapien luctus congue euismod aptent lobortis.</span>
                                     </div>
                                 </div>
-                                <div class="pt-14">
+                                <div class="pt-14 h-full flex mt-auto">
                                     <a
                                         href="#"
                                         role="link"
@@ -440,7 +467,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                         </div>
                         <!-- block -->
                         <div class="rounded-[3px] bg-white overflow-hidden shadow-card">
-                            <div class="">
+                            <div class="flex flex-col h-full">
                                 <div class="flex jutify-center md:justify-start items-center md:items-start gap-20 p-20 md:p-25 xlg:p-30 flex-col md:flex-row">
                                     <div class="w-65 h-65 bg-(--button-bg) rounded-[3px] flex justify-center items-center shrink-0">
                                         <img
@@ -455,7 +482,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                         <span class="para  space-y-16 font-lora text-(--text-grey)">Ultricies porttitor diam urna nisi efficitur magna mollis nunc taciti pulvinar. Nam at nisi dui id facilisis sapien luctus congue euismod aptent lobortis.</span>
                                     </div>
                                 </div>
-                                <div class="pt-14">
+                                <div class="pt-14 h-full flex mt-auto">
                                     <a
                                         href="#"
                                         role="link"
@@ -469,7 +496,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                         </div>
                         <!-- block -->
                         <div class="rounded-[3px] bg-white overflow-hidden shadow-card">
-                            <div class="">
+                            <div class="flex flex-col h-full">
                                 <div class="flex jutify-center md:justify-start items-center md:items-start gap-20 p-20 md:p-25 xlg:p-30 flex-col md:flex-row ">
                                     <div class="w-65 h-65 bg-(--button-bg) rounded-[3px] flex justify-center items-center shrink-0">
                                         <img
@@ -484,7 +511,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                         <span class="para  space-y-16 font-lora text-(--text-grey)">Ultricies porttitor diam urna nisi efficitur magna mollis nunc taciti pulvinar. Nam at nisi dui id facilisis sapien luctus congue euismod aptent lobortis.</span>
                                     </div>
                                 </div>
-                                <div class="pt-14">
+                                <div class="pt-14 h-full flex mt-auto">
                                     <a
                                         href="#"
                                         role="link"
@@ -498,7 +525,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                         </div>
                         <!-- block -->
                         <div class="rounded-[3px] bg-white overflow-hidden shadow-card">
-                            <div class="">
+                            <div class="flex flex-col h-full">
                                 <div class="flex jutify-center md:justify-start items-center md:items-start gap-20 p-20 md:p-25 xlg:p-30 flex-col md:flex-row">
                                     <div class="w-65 h-65 bg-(--button-bg) rounded-[3px] flex justify-center items-center shrink-0">
                                         <img
@@ -513,7 +540,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                         <span class="para  space-y-16 font-lora text-(--text-grey)">Ultricies porttitor diam urna nisi efficitur magna mollis nunc taciti pulvinar. Nam at nisi dui id facilisis sapien luctus congue euismod aptent lobortis.</span>
                                     </div>
                                 </div>
-                                <div class="pt-14">
+                                <div class="pt-14 h-full flex mt-auto">
                                     <a
                                         href="#"
                                         role="link"
@@ -619,7 +646,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                 <div class="container">
                     <div class="course-list pt-35 md:pt-60 xlg:pt-112 pb-35 md:pb-60 xlg:pb-128">
                         <div class="flex gap-32 flex-col xlg:flex-row">
-                            <div class="w-full xlg:w-[35%]">
+                            <div class="w-full xlg:w-[35%] px-20 py-10">
                                 <div class="space-y-20 xlg:sticky xlg:top-100">
                                     <span class="text-(--text-blue) text-sm uppercase font-semibold tracking-wider">Course List</span>
                                     <h2 class="text-h2 font-medium leading-[1.1em]">Get personalized business coaching to achieve your goals</h2>
@@ -633,7 +660,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                             class="btn-dark"
                                             aria-label="contact us for consulting services"
                                         >
-                                           <span> discover more</span>
+                                            <span> discover more</span>
                                         </a>
                                     </div>
                                 </div>
@@ -1116,13 +1143,11 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                     ▶
                                 </button>
                             </div>
-                          
                         </div>
                         <div class="w-full md:w-3/5 xlg:w-1/2 content flex justify-start text-center md:text-left flex-col gap-20 p-10">
                             <h2 class="text-h2 font-medium leading-[1.1em] text-white">Join Our Business Coaching Program And Start Seeing Results Now!</h2>
                             <div class="para  space-y-16 text-white">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                             
                             </div>
                             <div class="pt-14">
                                 <a
@@ -1138,26 +1163,26 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                     </div>
                 </div>
             </section>
-              <!-- Popup Modal -->
-                            <div id="videoModal" class="fixed inset-0 bg-black/70 flex items-center justify-center opacity-0 pointer-events-none transition duration-300 z-999">
-                                <div class="relative w-[90%]">
-                                    <!-- Close Button -->
-                                    <button id="closeBtn" class="absolute -top-50 right-60 transform -translate-x-1/2 text-white text-2xl">
-                                        ✕
-                                    </button>
-                                    <!-- Video -->
-                                    <div class="w-full max-w-650 h-400 mx-auto bg-black">
-                                        <iframe
-                                            id="videoFrame"
-                                            class="w-full h-full"
-                                            src=""
-                                            title="Video"
-                                            allow="autoplay; encrypted-media"
-                                            allowfullscreen
-                                        ></iframe>
-                                    </div>
-                                </div>
-                            </div>
+            <!-- Popup Modal -->
+            <div id="videoModal" class="fixed inset-0 bg-black/70 flex items-center justify-center opacity-0 pointer-events-none transition duration-300 z-999">
+                <div class="relative w-[90%]">
+                    <!-- Close Button -->
+                    <button id="closeBtn" class="absolute -top-50 right-60 transform -translate-x-1/2 text-white text-2xl">
+                        ✕
+                    </button>
+                    <!-- Video -->
+                    <div class="w-full max-w-650 h-400 mx-auto bg-black">
+                        <iframe
+                            id="videoFrame"
+                            class="w-full h-full"
+                            src=""
+                            title="Video"
+                            allow="autoplay; encrypted-media"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
             <!-- Section-cta-video ends -->
             <!-- Review Section Starts -->
             <section class="pt-35 md:pt-60 xlg:pt-96 pb-28 md:pb-60 xlg:pb-112">
@@ -1238,7 +1263,6 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                         </div>
                                     </div>
                                 </div>
-                              
                             </div>
                             <!-- pagination -->
                             <div class="swiper-pagination"></div>
@@ -1256,7 +1280,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                 src="./assets/images/form-image.webp"
                                 alt="image for form section"
                                 role="img"
-                                class="w-full aspect-square object-cover"
+                                class="w-full h-[95%] object-cover object-[60%] rounded-[3px]"
                             >
                         </div>
                         <div class="right-block md:w-1/2 p-25 xl:p-48 bg-white shadow-card1 flex justify-start items-center border-b-3 border-b-(--button-bg) -mt-55 md:mt-0 mx-20 md:mx-0">
@@ -1265,105 +1289,112 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                 <h2 class="text-h2 font-medium leading-[1.1em]">Make your appointment</h2>
                                 <div class="para  space-y-16 text-(--text-grey)">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                                
                                 </div>
-                                <!-- form -->
+                                <!-- wp7 form -->
                                 <form
-                                    method="POST"
-                                    class="space-y-10"
-                                    aria-label="Appointment form"
+                                    action="/simudar/#wpcf7-f9-o1"
+                                    method="post"
+                                    class="wpcf7-form init"
+                                    aria-label="Kontaktformular"
+                                    novalidate
+                                    data-status="init"
                                 >
-                                    <!-- Row 1 -->
-                                    <div class="grid md:grid-cols-2 gap-10">
-                                        <!-- Name -->
-                                        <div>
-                                            <label for="name" class="block mb-2 font-medium font-lora">
-                                                Name
-                                            </label>
-                                            <input
-                                                type="text"
-                                                id="name"
-                                                name="name"
-                                                placeholder="Name"
-                                                required
-                                                autocomplete="name"
-                                                class="w-full bg-[#F3F5F8] rounded-[3px] px-16 py-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            >
+                                    <fieldset class="hidden-fields-container">
+                                        <input type="hidden" name="_wpcf7" value="9">
+                                        <input type="hidden" name="_wpcf7_version" value="6.1.5">
+                                        <input type="hidden" name="_wpcf7_locale" value="de_DE">
+                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f9-o1">
+                                        <input type="hidden" name="_wpcf7_container_post" value="0">
+                                        <input type="hidden" name="_wpcf7_posted_data_hash" value="">
+                                    </fieldset>
+                                    <div class="form-main w-full grid grid-cols-1 gap-10 Trio1">
+                                        <div class="col-span-2 flex flex-wrap gap-10 mb-10">
+                                             <!-- NAME -->
+                                                <div class="w-full md:w-[calc(50%-10px)]">
+                                                    <label for="your-name" class="block mb-4 font-medium font-lora">Name</label>
+                                                    <span class="wpcf7-form-control-wrap block">
+                                                        <input
+                                                            id="your-name"
+                                                            type="text"
+                                                            name="your-name"
+                                                            class="wpcf7-form-control wpcf7-text w-full bg-[#F3F5F8] rounded-[3px] px-16 py-12 focus:outline-none focus:ring-2 focus:ring-blue-500 font-roboto"
+                                                            placeholder="Name"
+                                                        >
+                                                    </span>
+                                                </div>
+                                                <!-- PHONE -->
+                                                <div class="w-full md:w-[calc(50%-10px)]">
+                                                    <label for="phone" class="block mb-4 font-medium font-lora">Phone</label>
+                                                    <span class="wpcf7-form-control-wrap block">
+                                                        <input
+                                                            id="phone"
+                                                            type="tel"
+                                                            name="phone"
+                                                            class="wpcf7-form-control wpcf7-text w-full bg-[#F3F5F8] rounded-[3px] px-16 py-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                                            placeholder="Phone"
+                                                        >
+                                                    </span>
+                                                </div>
                                         </div>
-                                        <!-- Phone -->
-                                        <div>
-                                            <label for="phone" class="block mb-2 font-medium font-lora">
-                                                Phone
-                                            </label>
-                                            <input
-                                                type="tel"
-                                                id="phone"
-                                                name="phone"
-                                                placeholder="Phone"
-                                                required
-                                                autocomplete="tel"
-                                                class="w-full bg-[#F3F5F8] rounded-[3px] px-16 py-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            >
+                                        <div class="col-span-2 flex flex-wrap gap-10 mb-10">
+                                            <div class="w-full xlg:w-[calc(50%-10px)]">
+                                                <label for="mail" class="block mb-4 font-medium font-lora">E-Mail</label>
+                                                <span class="wpcf7-form-control-wrap block">
+                                                    <input
+                                                        id="mail"
+                                                        type="email"
+                                                        name="mail"
+                                                        class="wpcf7-form-control wpcf7-text w-full bg-[#F3F5F8] rounded-[3px] px-16 py-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                                        placeholder="E-Mail"
+                                                        autocomplete="email"
+                                                    >
+                                                </span>
+                                            </div>
+                                            <!-- SELECT -->
+                                            <div class="w-full xlg:w-[calc(50%-10px)]">
+                                                <span class="wpcf7-form-control-wrap block">
+                                                    <label for="business" class="block mb-4 font-medium font-lora">
+                                                        Your Business Model
+                                                    </label>
+                                                    <select name="select-3" id="business" class="wpcf7-form-control wpcf7-select w-full bg-[#F3F5F8] rounded-[3px] px-16 py-12 focus:outline-none focus:ring-2 focus:ring-blue-500 text-(--text-grey)">
+                                                        <option value="">Select Business Model</option>
+                                                        <option>Financial Technology</option>
+                                                        <option>E-commerce</option>
+                                                        <option>Healthcare</option>
+                                                        <option>Education</option>
+                                                        <option>Other</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- MESSAGE -->
+                                        <div class="col-span-2">
+                                            <label for="message" class="block mb-4 font-medium font-lora">Message</label>
+                                            <span class="wpcf7-form-control-wrap block">
+                                                <textarea
+                                                    id="message"
+                                                    name="message"
+                                                    rows="4"
+                                                    class="wpcf7-form-control wpcf7-textarea w-full bg-[#F3F5F8] rounded-[3px] px-16 py-12 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y"
+                                                    placeholder="Message"
+                                                ></textarea>
+                                            </span>
+                                        </div>
+                                        <!-- INFO -->
+                                        <div class="col-span-2 text-sm text-(--text-grey)">
+                                            Informationen zum Datenschutz bzgl. Ihrer Anfrage finden Sie hier:
+                                            <a href="/datenschutzerklaerung/" class="text-(--button-bg)">Datenschutzerklärung</a>
+                                        </div>
+                                        <!-- SUBMIT -->
+                                        <div class="col-span-2">
+                                            <input type="submit" class="wpcf7-form-control wpcf7-submit btn-submit w-full!" value="Nachricht senden">
+                                            <span class="wpcf7-spinner"></span>
                                         </div>
                                     </div>
-                                    <!-- Row 2 -->
-                                    <div class="grid xlg:grid-cols-2 gap-10">
-                                        <!-- Email -->
-                                        <div>
-                                            <label for="email" class="block mb-2 font-medium font-lora">
-                                                Email
-                                            </label>
-                                            <input
-                                                type="email"
-                                                id="email"
-                                                name="email"
-                                                placeholder="Email"
-                                                required
-                                                autocomplete="email"
-                                                class="w-full bg-[#F3F5F8] rounded-[3px] px-16 py-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            >
-                                        </div>
-                                        <!-- Business Model -->
-                                        <div>
-                                            <label for="business" class="block mb-2 font-medium font-lora">
-                                                Your Business Model
-                                            </label>
-                                            <select
-                                                id="business"
-                                                name="business"
-                                                required
-                                                class="w-full bg-[#F3F5F8] rounded-[3px] pl-16 pr-24 py-12 focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
-                                            >
-                                                <option value="">Select Business Model</option>
-                                                <option>Financial Technology</option>
-                                                <option>E-commerce</option>
-                                                <option>Healthcare</option>
-                                                <option>Education</option>
-                                                <option>Other</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <!-- Message -->
-                                    <div>
-                                        <label for="message" class="block mb-2 font-medium font-lora">
-                                            Message
-                                        </label>
-                                        <textarea
-                                            id="message"
-                                            name="message"
-                                            rows="4"
-                                            placeholder="Message"
-                                            required
-                                            class="w-full bg-[#F3F5F8] rounded-[3px] px-16 py-12 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y"
-                                        ></textarea>
-                                    </div>
-                                    <!-- Submit -->
-                                    <button type="submit" class="btn-dark w-full!">
-                                        <span>
-                                            Make an Appointment
-                                        </span>
-                                    </button>
+                                    <div class="wpcf7-response-output" aria-hidden="true"></div>
                                 </form>
+                                <!-- wp7 form end -->
+                                
                             </div>
                         </div>
                     </div>
@@ -1384,7 +1415,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                 >
                             </div>
                         </div>
-                        <div class="r-block xlg:w-1/2">
+                        <div class="r-block xlg:w-1/2 flex justify-center items-center">
                             <div class="space-y-20">
                                 <h2 class="text-h2 font-medium">
                                     Frequently Asked Questions
@@ -1422,8 +1453,6 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                         <div class="accordion-content overflow-hidden">
                                             <div class="para  space-y-16 p-25 text-(--text-grey)">
                                                 <p>Velit sociosqu purus enim pharetra sed sem at iaculis. Felis ridiculus adipiscing dignissim eros pellentesque mus vitae litora. Felis nullam tortor phasellus viverra ut arcu. Euismod magnis ante convallis vulputate odio augue sit pretium dapibus.</p>
-
-                                                
                                             </div>
                                         </div>
                                     </div>
@@ -1575,7 +1604,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
             <!-- footer -->
             <footer class="bg-(--text-dark) text-white">
                 <div class="container">
-                    <div class="footer-top flex xlg:justify-between items-start gap-20 xlg:gap-48 py-80 flex-wrap px-10 sm:px-32 xlg:px-0">
+                    <div class="footer-top flex xlg:justify-between items-start gap-20 xlg:gap-48 py-80 flex-wrap px-10 lg:px-32 xlg:px-0">
                         <div class="footlink space-y-20 w-full xlg:w-[calc(30%-24px)]">
                             <a href="#" aria-label="footer icon">
                                 <img src="./assets/images/Logo-Busneco-2.png" alt="footer logo image" class="w-152">
@@ -1595,7 +1624,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                 <a href="/" target="_blank" rel="noopener">
                                     <img
                                         src="./assets/images/twitter.svg"
-                                         alt="Visit our Twitter profile"
+                                        alt="Visit our Twitter profile"
                                         role="img"
                                         class="w-18"
                                     >
@@ -1603,7 +1632,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                                 <a href="/" target="_blank" rel="noopener">
                                     <img
                                         src="./assets/images/linkedin.svg"
-                                         alt="Visit our LinkedIn page"
+                                        alt="Visit our LinkedIn page"
                                         role="img"
                                         class="w-18"
                                     >
@@ -1619,7 +1648,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                             </div>
                         </div>
                         <!--  -->
-                        <div class="footlink space-y-20 w-[calc(50%-10px)] md:w-[calc(30%-10px)] xlg:w-[calc(20%-48px)]">
+                        <div class="footlink space-y-20 w-[calc(50%-10px)] md:w-[calc(25%-10px)] xlg:w-[calc(20%-48px)]">
                             <h2 class="text-t_20 font-semibold relative after:content-[] after:w-20 after:h-2 after after:bg-(--button-bg) after:absolute after:bottom-0">Information</h2>
                             <div class="[&_ul]:flex [&_ul]:flex-col [&_ul]:gap-7 [&_ul>li>a]:capitalize [&_ul>li>a]:font-lora!">
                                 <ul>
@@ -1642,7 +1671,7 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                             </div>
                         </div>
                         <!--  -->
-                        <div class="footlink space-y-20 w-[calc(50%-10px)] md:w-[calc(30%-10px)] xlg:w-[calc(20%-48px)]">
+                        <div class="footlink space-y-20 w-[calc(50%-10px)] md:w-[calc(25%-10px)] xlg:w-[calc(20%-48px)]">
                             <h2 class="text-t_20 font-semibold relative after:content-[] after:w-20 after:h-2 after after:bg-(--button-bg) after:absolute after:bottom-0">Services</h2>
                             <div class="[&_ul]:flex [&_ul]:flex-col [&_ul]:gap-7 [&_ul>li>a]:capitalize [&_ul>li>a]:font-lora!">
                                 <ul>
@@ -1665,27 +1694,54 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
                             </div>
                         </div>
                         <!--  -->
-                        <div class="footlink space-y-20 w-full md:w-[calc(40%-22px)] xlg:w-[calc(30%-24px)]">
+                        <div class="footlink space-y-20 w-full md:w-[calc(50%-22px)] xlg:w-[calc(30%-24px)]">
                             <h2 class="text-t_20 font-semibold relative after:content-[] after:w-20 after:h-2 after after:bg-(--button-bg) after:absolute after:bottom-0">Newsletter</h2>
                             <div class="space-y-20">
                                 <span class="font-lora">Signup our newsletter to get update information, news & insight</span>
-                                <form class="flex gap-10 flex-wrap md:flex-row flex-col">
-                                    <div>
-                                        <label for="email-footer" class="sr-only">Email address</label>
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            id="email-footer"
-                                            aria-label="Email address"
-                                            placeholder="Enter your email"
-                                            class="py-12 px-8 bg-white text-(--text-grey) outline-0 rounded-[3px] w-full md:w-auto"
-                                            required
-                                        >
-                                    </div>
-                                  
-                                    <button type="submit" class="btn-dark w-full! md:w-fit!"  aria-label="sign up for consulting services">
-                                        <span>Sign up</span></button>
-                                </form>
+                                <form action="/simudar/#wpcf7-f65-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+
+                                        <fieldset class="hidden-fields-container">
+                                            <input type="hidden" name="_wpcf7" value="65">
+                                            <input type="hidden" name="_wpcf7_version" value="6.1.5">
+                                            <input type="hidden" name="_wpcf7_locale" value="en_US">
+                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f65-o1">
+                                            <input type="hidden" name="_wpcf7_container_post" value="0">
+                                            <input type="hidden" name="_wpcf7_posted_data_hash" value="">
+                                        </fieldset>
+
+                                        <!-- FLEX ROW -->
+                                        <div class="form-main w-full flex items-center flex-wrap gap-10 newsletter">
+
+                                            <!-- INPUT -->
+                                            <div class="w-full md:flex-1">
+                                            <label for="email-footer" class="sr-only">* Name</label>
+                                            <span class="wpcf7-form-control-wrap w-full block" data-name="text-221">
+                                                <input 
+                                                class="wpcf7-form-control wpcf7-text py-12 px-8 bg-white text-(--text-grey) outline-0 rounded-[3px] w-full" 
+                                                placeholder="Enter Your E-mail" 
+                                                type="text" 
+                                                 id="email-footer" 
+                                                 autocomplete="email"
+                                                name="text-221"
+                                                >
+                                            </span>
+                                            </div>
+
+                                            <!-- BUTTON -->
+                                            <div class="w-full md:w-auto">
+                                            <input 
+                                                class="wpcf7-form-control wpcf7-submit has-spinner btn-submit w-full! md:w-fit!" 
+                                                type="submit" 
+                                                value="Sign up"
+                                            >
+                                            <span class="wpcf7-spinner"></span>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                        </form>
+                          
                             </div>
                         </div>
                     </div>
@@ -1698,6 +1754,5 @@ xlg:translate-y-0 xlg:opacity-100 xlg:pointer-events-auto z-100">
         </main>
         <script src="./assets/js/swiper-bundle.min.js"></script>
         <script src="./assets/js/script.js"></script>
-      
     </body>
 </html>

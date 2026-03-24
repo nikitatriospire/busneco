@@ -185,6 +185,9 @@ const swiper1 = new Swiper('.review-slider', {
       slidesPerView: 2
     },
     768: {
+      slidesPerView: 2
+    },
+    992: {
       slidesPerView: 3
     }
   }
